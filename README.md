@@ -1,4 +1,4 @@
-### PR: What are the steps to run the application? The below is documentation on how to use the application, but what are the steps to get it running? This becomes important even in pipeline development. ie what do you do after running dotnet build?
+#### PR: What are the steps to run the application? The below is documentation on how to use the application, but what are the steps to get it running? This becomes important even in pipeline development. ie what do you do after running dotnet build?
 
 -----
 
