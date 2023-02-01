@@ -1,0 +1,6 @@
+Some notes as to how I would carry out Pull Requests...
+
+Just in terms of code quality, would set up SonarQube so it can detect any technical debt and identify any code that might have security breaches. - I did attempt to set up SQ and tried to link my github to SQ but was having issues with the pem file. I created a github app for the api url that is a requirement, installed the app, and set up permissions. but connectivity with auth with SQ failed with the private key. i might try fix later.
+
+on that note, I will proceed with comments within the solution.
+
