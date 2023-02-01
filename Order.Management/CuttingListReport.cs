@@ -6,6 +6,7 @@ namespace Order.Management
 {
     class CuttingListReport : Order
     {
+        //consider just using uppercase or lower case for parameters for consistency
         public int tableWidth = 20;
         public CuttingListReport(string customerName, string customerAddress, string dueDate, List<Shape> shapes)
         {
@@ -24,6 +25,7 @@ namespace Order.Management
         public void generateTable()
         {
             PrintLine();
+            // what is the purpose of these empty string quotes? will this impact the outlook of the ui and make spacing issues?
             PrintRow("        ", "   Qty   ");
             PrintLine();
             PrintRow("Square",base.OrderedBlocks[0].TotalQuantityOfShape().ToString());
@@ -63,6 +65,6 @@ namespace Order.Management
             }
         }
 
-
+        // remove unnecessary spacing
     }
 }

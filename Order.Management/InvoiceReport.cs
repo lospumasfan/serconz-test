@@ -28,6 +28,7 @@ namespace Order.Management
 
         public void RedPaintSurcharge()
         {
+            // what is the purpose of these empty string quotes? will this impact the outlook of the ui and make spacing issues?
             Console.WriteLine("Red Color Surcharge       " + TotalAmountOfRedShapes() + " @ $" + base.OrderedBlocks[0].AdditionalCharge + " ppi = $" + TotalPriceRedPaintSurcharge());
         }
 
@@ -41,9 +42,25 @@ namespace Order.Management
         {
             return TotalAmountOfRedShapes() * base.OrderedBlocks[0].AdditionalCharge;
         }
+        
+        // could the below function be in its own class called GenerateTable? feel like this could be tidied up a bit.
+        // could you try something like the below? 
+        // or something to that effect? in part to remove inline code, also in part to attempt to keep code clean. also easier to debug and maintain
+
+       /*   
+            public static void TestCars1()  
+            {         
+                System.Console.WriteLine("\Generate Table");  
+                System.Console.WriteLine("----------"); 
+
+                OrderedBlocks ob = new OrderedBlocks();  
+                ob.TotalAmountOfRedShapes()
+            }  
+        */
         public void GenerateTable()
         {
             PrintLine();
+            // what is the purpose of these empty string quotes? will this impact the outlook of the ui and make spacing issues?
             PrintRow("        ", "   Red   ", "  Blue  ", " Yellow ");
             PrintLine();
             PrintRow("Square", base.OrderedBlocks[0].NumberOfRedShape.ToString(), base.OrderedBlocks[0].NumberOfBlueShape.ToString(), base.OrderedBlocks[0].NumberOfYellowShape.ToString());
@@ -53,14 +70,17 @@ namespace Order.Management
         }
         public void OrderSquareDetails()
         {
+            // what is the purpose of these empty string quotes? will this impact the outlook of the ui and make spacing issues?
             Console.WriteLine("\nSquares 		  " + base.OrderedBlocks[0].TotalQuantityOfShape() + " @ $" + base.OrderedBlocks[0].Price + " ppi = $" + base.OrderedBlocks[0].Total());
         }
         public void OrderTriangleDetails()
         {
+            // what is the purpose of these empty string quotes? will this impact the outlook of the ui and make spacing issues?
             Console.WriteLine("Triangles 		  " + base.OrderedBlocks[1].TotalQuantityOfShape() + " @ $" + base.OrderedBlocks[1].Price + " ppi = $" + base.OrderedBlocks[1].Total());
         }
         public void OrderCircleDetails()
         {
+            // what is the purpose of these empty string quotes? will this impact the outlook of the ui and make spacing issues?
             Console.WriteLine("Circles 		  " + base.OrderedBlocks[2].TotalQuantityOfShape() + " @ $" + base.OrderedBlocks[2].Price + " ppi = $" + base.OrderedBlocks[2].Total());
         }
         public void PrintLine()

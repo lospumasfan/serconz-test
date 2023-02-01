@@ -12,7 +12,7 @@ namespace Order.Management
         public int NumberOfRedShape { get; set; }
         public int NumberOfBlueShape { get; set; }
         public int NumberOfYellowShape { get; set; }
-        public int TotalQuantityOfShape()
+        public int TotalQuantityOfShape() // need a line space here before function call to split out the parameters? code consistency.
         {
             return NumberOfRedShape + NumberOfBlueShape + NumberOfYellowShape;
         }
