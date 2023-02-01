@@ -6,6 +6,7 @@ namespace Order.Management
 {
     class Circle : Shape
     {
+        // you use camel case for circlePrice and upper case for Circle. For consistency, pick either lower case or camel case for classes/variables/parameters
         public int circlePrice = 3;
         public Circle(int red, int blue, int yellow)
         {
@@ -16,6 +17,8 @@ namespace Order.Management
             base.NumberOfBlueShape = blue;
             base.NumberOfYellowShape = yellow;
         }
+
+        // for all the returns in the below function calls, consider using variables, so that if you need to change a value, you dont have to hunt for it, and only change in the one place.
         public override int Total()
         {
             return RedCirclesTotal() + BlueCirclesTotal() + YellowCirclesTotal();

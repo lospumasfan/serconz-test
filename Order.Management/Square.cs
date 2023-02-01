@@ -6,7 +6,7 @@ namespace Order.Management
 {
     class Square : Shape
     {
-
+        // remove this line here. not necessary. keep code clean.
         public int SquarePrice = 1;
 
         public Square(int numberOfRedSquares, int numberOfBlueSquares, int numberOfYellowSquares)

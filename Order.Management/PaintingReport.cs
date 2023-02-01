@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Order.Management
 {
+    // looking at this class... what is the difference between PaintingReport and InvoiceReport? 
+    // there is some code duplication going on, could merge all reused code into one class and inherit where necessary.
     class PaintingReport : Order
     {
         public int tableWidth = 73;
@@ -21,6 +23,7 @@ namespace Order.Management
             generateTable();
         }
 
+        // see comment for code cleanliness in InvoiceReport, line 46
         public void generateTable()
         {
             PrintLine();

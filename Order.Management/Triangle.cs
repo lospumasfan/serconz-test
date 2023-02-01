@@ -34,6 +34,6 @@ namespace Order.Management
         {
             return (base.NumberOfYellowShape * Price);
         }
-    
-}
+    // remove unnecessary line space.
+}// tab this bracket in so it lines up with class Triangle.
 }

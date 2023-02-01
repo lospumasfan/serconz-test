@@ -8,6 +8,9 @@ namespace Order.Management
         // Main entry
         static void Main(string[] args)
         {
+            // in some cases you have line spacings between function calls, like here. 
+            // in others like the below OrderCirclesInput() you have no line spacings.
+            //remove unnecessary line spacings for consistency.
             var (customerName, address, dueDate) = CustomerInfoInput();
 
             var orderedShapes = CustomerOrderInput();
