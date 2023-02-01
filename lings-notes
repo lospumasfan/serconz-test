@@ -1,0 +1,17 @@
+Some notes as to how I would carry out Pull Requests...
+
+Just in terms of code quality, would set up SonarQube so it can detect any technical debt and identify any code that might have security breaches. - I did attempt to set up SQ and tried to link my github to SQ but was having issues with the pem file. I created a github app for the api url that is a requirement, installed the app, and set up permissions. but connectivity with auth with SQ failed with the private key. i might try fix later.
+
+On that note, I will proceed with comments within the solution.
+
+Building the solution:
+
+Two warnings appear:
+
+Warning NETSDK1138: The target framework 'netcoreapp3.0' is out of support and will not receive security updates in the future. Please refer to https://aka.ms/dotnet-core-support for more information about the support policy. (NETSDK1138) (Order.Management)
+ - this in itself could affect security of code. Looking at the lifecycle, compatible and supported dotnet framework is up to .Net6 and .Net. Consider upgrading in the future.
+ 
+ /Users/si124551/Documents/serconz-test/Order.Management/Order.cs(23,23): Warning CS0114: 'Order.ToString()' hides inherited member 'object.ToString()'. To make the current member override that implementation, add the override keyword. Otherwise add the new keyword. (CS0114) (Order.Management)
+ - will talk about this in more detail. but discusses when to use new vs override and the impacts on output in terms of dotnet documentation and recommendations. While the code compiles and has no impact on build, have you checked and verified that the output is correct? 
+
+I have left comments on most of the classes within the solution. Mostly to do with code cleanliness, code duplication, some basic coding standards to do with consistency in line spacing and variable/parameter/class naming (if you are going to use CamelCase then use it everywhere, not lowerCase in some places and CamelCase in others), and some actual suggestions based on coding standards. Am not a C# expert, but did some reading on standards. 
